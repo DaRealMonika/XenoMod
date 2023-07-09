@@ -1,0 +1,250 @@
+﻿Mods: {
+	XenoMod: {
+		Common: {
+			SpecialCrafting: Used to craft items from
+			SwappedWith: Can be swapped with
+			WeaponPart: "'Maybe I could combine this with other parts to make a weapon.'"
+			GeneratedSprite: "[c/808080:This item has no set sprite, using base sprite and material color]"
+			KnockbackImmune: Grants immunity to knockback
+			IncreasesDef: Increase defense by
+			PotionSickReduced: Reduces duration of {$BuffName.PotionSickness} by
+			ManaSickDmgReduced: Reduces the damage reduction from {$BuffName.ManaSickness} by
+			ManaReduced: Reduces mana usage by
+			MoveSpeed: movement speed
+			JumpSpeed: jump speed
+			MinionDamage: minion damage
+			MinionSlot: Increases your max number of minions by
+			LessAggro: Enemies are less likely to target you
+		}
+
+		BuffName: {
+			LunaticShots: Lunatic Shots
+		}
+
+		BuffDescription: {
+			LunaticShots: "Fires a lunar projectile up to {0} times"
+		}
+
+		ProjectileName: {
+			CactusStormProj: "{$ProjectileName.RollingCactusSpike}"
+			FriendlyHallowBossDeathAurora: Death Aurora
+			FriendlyHallowBossEverlastingRainbow: "{$ProjectileName.HallowBossLastingRainbow}"
+			FriendlyHallowBossRainbowStreak: "{$ProjectileName.HallowBossRainbowStreak}"
+			FriendlyHallowBossSplitShot: Split Shot
+			FriendlyHallowBossSplitShotCore: Split Shot Core
+			PlayerSlash: Slash
+			LunaticShot: Lunatic Shot
+			LunaticMist: "{$ProjectileName.CultistBossIceMist}"
+			LunaticFlames: "{$ProjectileName.CultistBossFireBall}"
+			LunaticDarkFlames: "{$ProjectileName.CultistBossFireBallClone}"
+		}
+
+		ItemName: {
+			RPG: Rocket-Propelled Grenade Launcher
+			PlanteraSpawn: Suspicious Bulb
+			ImbuingCrystal: Imbuing Crystal
+			HellFlameDoll: Hellflame Doll
+			MushroomTop: Mushroom Cap
+			MushroomGuard: Mushroom Guard
+			MushroomGreaves: Mushroom Greaves
+			GlowingMushroomTop: Glowing Mushroom Cap
+			GlowingMushroomGuard: Glowing Mushroom Guard
+			GlowingMushroomGreaves: Glowing Mushroom Greaves
+			ReinforcedShield: Reinforced Shield
+			ThornyShield: Thorny Shield
+			Fangs: Fangs
+			SweetTooth: Sweet Tooth
+			EntwinedBlade: Entwined Blade
+			TomeOfLight: Tome of Light
+			AbsoluteRadiance: Absolute Radiance
+			TarotCards: Tarot Cards
+			CounterStrikePendant: Counter-Strike Pendant
+			PureLight: Pure Light
+			CactusStorm: Cactus Storm
+			TomeOfTrueLight: Tome of True Light
+			FeatheredCap: Feathered Cap
+			FeatheredChestplate: Feathered Chestplate
+			FeatheredGreaves: Feathered Greaves
+			RodOfLunatics: Rod of Lunatics
+			Rod: " Rod"
+			Binding: " Binding"
+			Blade: " Sword Blade"
+			Tip: " Spear Tip"
+			Grip: " Bow Grip"
+			Barrel: " Gun Barrel"
+			Cover: " Tome Cover"
+			Stone: " Staff Stone"
+			Hook: " Whip Popper"
+		}
+
+		ItemTooltip: {
+			EmpressButterflyJar: "{$Mods.XenoMod.Common.SpecialCrafting} {$Mods.XenoMod.ItemName.PureLight}"
+			RPG:
+			'''
+			'Don't shoot a leg off!'
+			'''
+			PlanteraSpawn:
+				'''
+				Summons {$NPCName.Plantera} in the {$Bestiary_Biomes.UndergroundJungle}
+				'A suspicious bulb planted in your inventory'
+				'''
+			ImbuingCrystal: Imbues your summons with your afflicted flask.
+			HellFlameDoll:
+				'''
+				{$Mods.XenoMod.Common.MinionSlot} 1
+				Your minions inflicts the flames of hell
+				'''
+			MushroomTop: "{$Mods.XenoMod.Common.SwappedWith} {$Mods.XenoMod.ItemName.GlowingMushroomTop}"
+			MushroomGuard: "{$Mods.XenoMod.Common.SwappedWith} {$Mods.XenoMod.ItemName.GlowingMushroomGuard}"
+			MushroomGreaves: "{$Mods.XenoMod.Common.SwappedWith} {$Mods.XenoMod.ItemName.GlowingMushroomGreaves}"
+			GlowingMushroomTop: "{$Mods.XenoMod.Common.SwappedWith} {$Mods.XenoMod.ItemName.MushroomTop}"
+			GlowingMushroomGuard: "{$Mods.XenoMod.Common.SwappedWith} {$Mods.XenoMod.ItemName.MushroomGuard}"
+			GlowingMushroomGreaves: "{$Mods.XenoMod.Common.SwappedWith} {$Mods.XenoMod.ItemName.MushroomGreaves}"
+			ReinforcedShield: "{$Mods.XenoMod.Common.KnockbackImmune}"
+			ThornyShield:
+				'''
+				{$Mods.XenoMod.Common.KnockbackImmune}
+				Grants some thorns
+				'''
+			Fangs:
+				'''
+				Melee attacks steals some life
+				'Should you really put these in your mouth?'
+				'''
+			SweetTooth:
+				'''
+				Melee attacks steals some life and summons bees
+				'Having a craving for some candy.'
+				'''
+			EntwinedBlade: ""
+			TomeOfLight: Shoots balls of light
+			AbsoluteRadiance: Causes a beautiful deadly aurora and increases length of immunity after taking damage
+			TarotCards:
+				'''
+				Must be used in a {$Bestiary_Biomes.Graveyard}
+				Pull a card to tell your fate
+				'''
+			CounterStrikePendant:
+				'''
+				You slash with your hands in 8 directions when you get hurt
+				Damage of slashes increase after boss kills until hardmode
+				'''
+			PureLight: "'A shard of pure light somehow in physical form floating over your hand.'"
+			CactusStorm: Shoot a wave of cactus spikes
+			TomeOfTrueLight: "'Become one with the [c/{0}:bullet-hell].'"
+			FeatheredCap: "+5% {$Mods.XenoMod.Common.JumpSpeed}"
+			FeatheredChestplate: "{$Mods.XenoMod.Common.LessAgro}"
+			FeatheredGreaves: "+5% {$Mods.XenoMod.Common.MoveSpeed}"
+			RodOfLunatics: "`A cultist's favorite weapon.`"
+			Rod: "{$Mods.XenoMod.Common.WeaponPart}"
+			Binding: "{$Mods.XenoMod.Common.WeaponPart}"
+			Blade: "{$Mods.XenoMod.Common.WeaponPart}"
+			Tip: "{$Mods.XenoMod.Common.WeaponPart}"
+			Grip: "{$Mods.XenoMod.Common.WeaponPart}"
+			Barrel: "{$Mods.XenoMod.Common.WeaponPart}"
+			Cover: "{$Mods.XenoMod.Common.WeaponPart}"
+			Stone: "{$Mods.XenoMod.Common.WeaponPart}"
+			Hook: "{$Mods.XenoMod.Common.WeaponPart}"
+		}
+
+		ArmorSetBonus: {
+			FullMushroomArmor:
+				'''
+				{$Mods.XenoMod.Common.IncreasesDef} 1
+				{$Mods.XenoMod.Common.PotionSickReduced} 15%
+				'bup'
+				'''
+			2MushroomArmor:
+				'''
+				{$Mods.XenoMod.Common.IncreasesDef} 1
+				{$Mods.XenoMod.Common.PotionSickReduced} 10%
+				{$Mods.XenoMod.Common.ManaSickDmgReduced} 5%
+				{$Mods.XenoMod.Common.ManaReduced} 3%
+				'''
+			1MushroomArmor:
+				'''
+				{$Mods.XenoMod.Common.IncreasesDef} 1
+				{$Mods.XenoMod.Common.PotionSickReduced} 5%
+				{$Mods.XenoMod.Common.ManaSickDmgReduced} 10%
+				{$Mods.XenoMod.Common.ManaReduced} 6%
+				'''
+			FullGlowingMushroomArmor:
+				'''
+				{$Mods.XenoMod.Common.IncreasesDef} 1
+				{$Mods.XenoMod.Common.ManaSickDmgReduced} 15%
+				{$Mods.XenoMod.Common.ManaReduced} 9%
+				'bup'
+				'''
+			2GlowingMushroomArmor:
+				'''
+				{$Mods.XenoMod.Common.IncreasesDef} 1
+				{$Mods.XenoMod.Common.ManaSickDmgReduced} 10%
+				{$Mods.XenoMod.Common.ManaReduced} 6%
+				{$Mods.XenoMod.Common.PotionSickReduced} 5%
+				'''
+			1GlowingMushroomArmor:
+				'''
+				{$Mods.XenoMod.Common.IncreasesDef} 1
+				{$Mods.XenoMod.Common.ManaSickDmgReduced} 5%
+				{$Mods.XenoMod.Common.ManaReduced} 3%
+				{$Mods.XenoMod.Common.PotionSickReduced} 10%
+				'''
+			FeatheredArmor:
+				'''
+				+10% {$Mods.XenoMod.Common.MinionDamage}
+				+18% {$Mods.XenoMod.Common.JumpSpeed}
+				+15% {$Mods.XenoMod.Common.MoveSpeed}
+				{$Mods.XenoMod.Common.MinionSlot} 1
+				'Feel the wind beneath you feet'
+				'''
+		}
+
+		DeathText: {
+			TarotCard1: pulled their last card.
+			TarotCard2: ran out of luck.
+		}
+
+		MaterialName: {
+			Test: Test of Angels
+			Wood: Wood
+			Ebonwood: Ebonwood
+			Mahogany: Mahogany
+			Pearlwood: Pearlwood
+			Shadewood: Shadewood
+			SpookyWood: Spooky Wood
+			DynastyWood: Dynasty Wood
+			BorealWood: Boreal Wood
+			PalmWood: Palm Wood
+			Copper: Copper
+			Tin: Tin
+			Iron: Iron
+			Lead: Lead
+			Silver: Silver
+			Tungsten: Tungsten
+			Gold: Gold
+			Platinum: Platinum
+			Demonite: Demonite
+			Crimtane: Crimtane
+			Hellstone: Hellstone
+		}
+
+		MaterialTooltip: {
+			Base: "Weapon Effectiveness:"
+			BaseExpand: "Weapon Effectiveness: [[c/808080:Hold Shift to expand]]"
+			Rod: "    Rod: [c/{0}:{1}]"
+			Binding: "    Binding: [c/{0}:{1}]"
+			Blade: "    Sword Blade: [c/{0}:{1}]"
+			Tip: "    Spear Tip: [c/{0}:{1}]"
+			Grip: "    Bow Grip: [c/{0}:{1}]"
+			Barrel: "    Gun Barrel: [c/{0}:{1}]"
+			Cover: "    Tome Cover: [c/{0}:{1}]"
+			Stone: "    Staff Stone: [c/{0}:{1}]"
+			Hook: "    Whip Popper: [c/{0}:{1}]"
+			Modifiers: "    Modifier Slots: [c/{0}:{1}]"
+		}
+
+		DropCondition: {
+			AfterBoss: Drops after {0} has been defeated
+		}
+	}
+}

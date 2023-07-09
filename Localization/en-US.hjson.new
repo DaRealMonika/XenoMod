@@ -1,0 +1,14 @@
+
+Mods: {
+	XenoMod: {
+		Items: {
+			BlazingCore.DisplayName: Blazing Core
+			FerroSteelBar.DisplayName: Ferro Steel Bar
+			ForgedLightBar.DisplayName: Forged Light Bar
+			PureLight.DisplayName: Pure Light
+			TomeOfLight.DisplayName: Tome of Light
+			TomeOfTrueLight.DisplayName: Tome of True Light
+			EntwinedBlade.DisplayName: Entwined Blade
+		}
+	}
+}
