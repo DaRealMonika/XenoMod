@@ -25,10 +25,10 @@ namespace XenoMod.Common.GlobalItems
         }
         private bool Parts(Item entity, out ModTKMaterial mat, out string kind)
         {
-            if (entity.ModItem is WeaponParts part)
+            if (entity.ModItem is ModTKPart part)
             {
                 mat = part.MatType;
-                kind = part.Kind;
+                kind = part.BaseName;
                 return true;
             }
             mat = null;
@@ -42,7 +42,7 @@ namespace XenoMod.Common.GlobalItems
 #if DEBUG
             debug = true;
 #endif
-            return entity.type == ItemID.EmpressButterflyJar || Materials(entity, out ModTKMaterial _) || Parts(entity, out ModTKMaterial _, out string _) || debug;
+            return entity.type == ItemID.EmpressButterflyJar || Materials(entity, out ModTKMaterial _) || Parts(entity, out ModTKMaterial _, out string _) || debug; // you don't need to define a type for discards
         }
 
         public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
@@ -114,7 +114,7 @@ namespace XenoMod.Common.GlobalItems
                     //break;
                 }
             }*/
-            tooltips.Add(new(Mod, "Debug", item.ModItem?.Texture));
+            tooltips.Add(new(Mod, "Debug", item.ModItem?.Texture ?? ""));
 #endif
         }
     }
