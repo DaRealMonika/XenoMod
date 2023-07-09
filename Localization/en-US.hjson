@@ -66,15 +66,15 @@
 			FeatheredChestplate: Feathered Chestplate
 			FeatheredGreaves: Feathered Greaves
 			RodOfLunatics: Rod of Lunatics
-			Rod: " Rod"
-			Binding: " Binding"
-			Blade: " Sword Blade"
-			Tip: " Spear Tip"
-			Grip: " Bow Grip"
-			Barrel: " Gun Barrel"
-			Cover: " Tome Cover"
-			Stone: " Staff Stone"
-			Hook: " Whip Popper"
+			WeaponRod: " Rod"
+			WeaponBinding: " Binding"
+			WeaponBlade: " Sword Blade"
+			WeaponTip: " Spear Tip"
+			WeaponGrip: " Bow Grip"
+			WeaponBarrel: " Gun Barrel"
+			WeaponCover: " Tome Cover"
+			WeaponStone: " Staff Stone"
+			WeaponHook: " Whip Popper"
 		}
 
 		ItemTooltip: {
@@ -136,15 +136,15 @@
 			FeatheredChestplate: "{$Mods.XenoMod.Common.LessAgro}"
 			FeatheredGreaves: "+5% {$Mods.XenoMod.Common.MoveSpeed}"
 			RodOfLunatics: "`A cultist's favorite weapon.`"
-			Rod: "{$Mods.XenoMod.Common.WeaponPart}"
-			Binding: "{$Mods.XenoMod.Common.WeaponPart}"
-			Blade: "{$Mods.XenoMod.Common.WeaponPart}"
-			Tip: "{$Mods.XenoMod.Common.WeaponPart}"
-			Grip: "{$Mods.XenoMod.Common.WeaponPart}"
-			Barrel: "{$Mods.XenoMod.Common.WeaponPart}"
-			Cover: "{$Mods.XenoMod.Common.WeaponPart}"
-			Stone: "{$Mods.XenoMod.Common.WeaponPart}"
-			Hook: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponRod: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponBinding: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponBlade: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponTip: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponGrip: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponBarrel: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponCover: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponStone: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponHook: "{$Mods.XenoMod.Common.WeaponPart}"
 		}
 
 		ArmorSetBonus: {

@@ -1,10 +1,12 @@
 using Terraria;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
+using Terraria.ModLoader;
 
 namespace XenoMod.Content.Items.Materials
 {
-    public class Test : ModTKMaterial
+	[Autoload(false)]
+	public class Test : ModTKMaterial
     {
         public override void SetDefaults()
         {
@@ -19,8 +21,9 @@ namespace XenoMod.Content.Items.Materials
             barrelStr = -50.3786f;
             modifierSlots = 50;
         }
-    }
-    public class Wood : ModTKMaterial
+	}
+	[Autoload(false)]
+	public class Wood : ModTKMaterial
     {
         public override void SetDefaults()
         {
@@ -37,8 +40,9 @@ namespace XenoMod.Content.Items.Materials
             hookStr = 1;
             modifierSlots = 1;
         }
-    }
-    public class Ebonwood : Wood 
+	}
+	[Autoload(false)]
+	public class Ebonwood : Wood 
     {
         public override void SetDefaults() 
         {
@@ -48,8 +52,9 @@ namespace XenoMod.Content.Items.Materials
             rodStr += 0.2f;
             bladeStr += 0.3f;
         }
-    }
-    public class Mahogany : Wood
+	}
+	[Autoload(false)]
+	public class Mahogany : Wood
     {
         public override void SetDefaults()
         {
@@ -62,8 +67,9 @@ namespace XenoMod.Content.Items.Materials
             stoneStr += 2.5f;
             modifierSlots += 0.3f;
         }
-    }
-    public class Pearlwood : Wood
+	}
+	[Autoload(false)]
+	public class Pearlwood : Wood
     {
         public override void SetDefaults()
         {
@@ -75,8 +81,9 @@ namespace XenoMod.Content.Items.Materials
             stoneStr += 3.8f;
             modifierSlots += 0.6f;
         }
-    }
-    public class Shadewood : Ebonwood
+	}
+	[Autoload(false)]
+	public class Shadewood : Ebonwood
     {
         public override void SetDefaults()
         {
@@ -86,8 +93,9 @@ namespace XenoMod.Content.Items.Materials
             rodStr -= 0.1f;
             bladeStr += 0.1f;
         }
-    }
-    public class SpookyWood : Wood
+	}
+	[Autoload(false)]
+	public class SpookyWood : Wood
     {
         public override void SetDefaults()
         {
@@ -99,8 +107,9 @@ namespace XenoMod.Content.Items.Materials
             stoneStr -= 3;
             hookStr += 4.3f;
         }
-    }
-    public class DynastyWood : Wood
+	}
+	[Autoload(false)]
+	public class DynastyWood : Wood
     {
         public override void SetDefaults()
         {
@@ -108,8 +117,9 @@ namespace XenoMod.Content.Items.Materials
             color = Color.SaddleBrown;
             itemId = ItemID.DynastyWood;
         }
-    }
-    public class BorealWood : Wood
+	}
+	[Autoload(false)]
+	public class BorealWood : Wood
     {
         public override void SetDefaults()
         {
@@ -117,8 +127,9 @@ namespace XenoMod.Content.Items.Materials
             color = new(99, 75, 58);
             itemId = ItemID.BorealWood;
         }
-    }
-    public class PalmWood : Wood
+	}
+	[Autoload(false)]
+	public class PalmWood : Wood
     {
         public override void SetDefaults()
         {
@@ -126,8 +137,9 @@ namespace XenoMod.Content.Items.Materials
             color = new(160, 117, 64);
             itemId = ItemID.PalmWood;
         }
-    }
-    public class Copper : ModTKMaterial
+	}
+	[Autoload(false)]
+	public class Copper : ModTKMaterial
     {
         public override void SetDefaults()
         {
@@ -136,8 +148,9 @@ namespace XenoMod.Content.Items.Materials
             baseStr = 1;
             rodStr = 3;
         }
-    }
-    public class Tin : Copper
+	}
+	[Autoload(false)]
+	public class Tin : Copper
     {
         public override void SetDefaults()
         {
@@ -145,8 +158,9 @@ namespace XenoMod.Content.Items.Materials
             color = new(163, 149, 119);
             itemId = ItemID.TinBar;
         }
-    }
-    public class Iron : Copper
+	}
+	[Autoload(false)]
+	public class Iron : Copper
     {
         public override void SetDefaults()
         {
@@ -156,8 +170,9 @@ namespace XenoMod.Content.Items.Materials
             baseStr += 1;
             rodStr += 2.3f;
         }
-    }
-    public class Lead : Iron
+	}
+	[Autoload(false)]
+	public class Lead : Iron
     {
         public override void SetDefaults()
         {
@@ -165,8 +180,9 @@ namespace XenoMod.Content.Items.Materials
             color = Color.DarkSlateGray;
             itemId = ItemID.LeadBar;
         }
-    }
-    public class Silver : Iron
+	}
+	[Autoload(false)]
+	public class Silver : Iron
     {
         public override void SetDefaults()
         {
@@ -176,8 +192,9 @@ namespace XenoMod.Content.Items.Materials
             baseStr += 1;
             rodStr += 2.3f;
         }
-    }
-    public class Tungsten : Silver
+	}
+	[Autoload(false)]
+	public class Tungsten : Silver
     {
         public override void SetDefaults()
         {
@@ -185,8 +202,9 @@ namespace XenoMod.Content.Items.Materials
             color = new(145, 163, 141);
             itemId = ItemID.TungstenBar;
         }
-    }
-    public class Gold : Silver
+	}
+	[Autoload(false)]
+	public class Gold : Silver
     {
         public override void SetDefaults()
         {
@@ -196,8 +214,9 @@ namespace XenoMod.Content.Items.Materials
             baseStr += 1;
             rodStr += 2.3f;
         }
-    }
-    public class Platinum : Gold
+	}
+	[Autoload(false)]
+	public class Platinum : Gold
     {
         public override void SetDefaults()
         {
@@ -205,8 +224,9 @@ namespace XenoMod.Content.Items.Materials
             color = new(183, 183, 229);
             itemId = ItemID.PlatinumBar;
         }
-    }
-    public class Demonite : Gold
+	}
+	[Autoload(false)]
+	public class Demonite : Gold
     {
         public override void SetDefaults()
         {
@@ -217,6 +237,7 @@ namespace XenoMod.Content.Items.Materials
             rodStr += 2.3f;
         }
     }
+	[Autoload(false)]
     public class Crimtane : Demonite
     {
         public override void SetDefaults()

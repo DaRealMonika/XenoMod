@@ -1,10 +1,13 @@
 using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ModLoader.Core;
 using XenoMod.Content.Items.Materials;
 
 namespace XenoMod
@@ -61,21 +64,44 @@ namespace XenoMod
 
         public override void Load()
         {
-            for (int i = 0; i < TKMaterialLoader.MaterialCount; i++)
-            {
-                ModTKMaterial material = TKMaterialLoader.GetTKMaterial(i);
-                material.SetDefaults();
-                AddContent(new WeaponParts(material, "Rod"));
-                AddContent(new WeaponParts(material, "Binding"));
-                AddContent(new WeaponParts(material, "Blade"));
-                AddContent(new WeaponParts(material, "Tip"));
-                AddContent(new WeaponParts(material, "Grip"));
-                AddContent(new WeaponParts(material, "Barrel"));
-                AddContent(new WeaponParts(material, "Cover"));
-                AddContent(new WeaponParts(material, "Stone"));
-                AddContent(new WeaponParts(material, "Hook"));
-            }
-        }
+			LoadTKContent();
+		}
+		//probably best to put this mess of code in its own method
+		public void LoadTKContent()
+		{
+			List<Type> materialTypes = new();
+			List<Type> partTypes = new();
+			foreach (Mod mod in ModLoader.Mods) {
+				foreach (Type type in (
+					from t in AssemblyManager.GetLoadableTypes(mod.Code)
+					where !t.IsAbstract && !t.ContainsGenericParameters
+					where t.GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, Type.EmptyTypes) != null
+					select t).OrderBy((Type type) => type.FullName, StringComparer.InvariantCulture)) {
+
+					if (type.IsAssignableTo(typeof(ModTKMaterial))) {
+						materialTypes.Add(type);
+					} else if (type.IsAssignableTo(typeof(ModTKPart))) {
+						partTypes.Add(type);
+					}
+				}
+			}
+			LoaderUtils.ForEachAndAggregateExceptions(
+				materialTypes,
+				(matType) => {
+					ModTKMaterial mat = (ModTKMaterial)Activator.CreateInstance(matType, nonPublic: true);
+					AddContent(mat);
+					mat.SetDefaults();
+					LoaderUtils.ForEachAndAggregateExceptions(
+						partTypes,
+						(partType) => {
+							ModTKPart part = (ModTKPart)Activator.CreateInstance(partType, nonPublic: true);
+							part.MatType = mat;
+							AddContent(part);
+						}
+					);
+				}
+			);
+		}
     }
 
     public static class TKMaterialLoader
@@ -106,7 +132,8 @@ namespace XenoMod
         public int stack = 999;
         public int rarity = ItemRarityID.White;
         public int itemId;
-        public Dictionary<string, int> amount = new(){ ["Rod"] = 3, ["Binding"] = 2, ["Blade"] = 6, ["Tip"] = 1, ["Grip"] = 4, ["Barrel"] = 8, ["Cover"] = 5, ["Stone"] = 2, ["Hook"] = 3 };
+        public Dictionary<string, float> amountOverride = new();
+        public float amountMult = 1f;
         public string texture = "XenoMod/Content/Items/Materials/";
         public Color color = Color.White;
         public int stationId = -1;
@@ -128,6 +155,6 @@ namespace XenoMod
             Type = TKMaterialLoader.ReserveTKMaterialID();
             DisplayName = LocalizationLoader.GetOrCreateTranslation(Mod, "MaterialName." + Name);
             TKMaterialLoader.materials.Add(this);
-        }
-    }
+		}
+	}
 }
