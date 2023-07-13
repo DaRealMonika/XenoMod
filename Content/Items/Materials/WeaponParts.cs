@@ -91,7 +91,7 @@ namespace XenoMod.Content.Items.Materials
         public override void SetDefaults()
         {
 			Item.maxStack = 999;
-            Item.rare = MatType.rarity;
+            Item.rare = MatType.overrideRarity ? MatType.rarity : new Item(MatType.itemId).rare;
             if (!HasTexture) Item.color = MatType.color;
             Item.width = 20;
             Item.height = 20;

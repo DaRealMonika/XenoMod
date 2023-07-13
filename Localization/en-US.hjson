@@ -3,7 +3,7 @@
 		Common: {
 			SpecialCrafting: Used to craft items from
 			SwappedWith: Can be swapped with
-			ShiftExpand: [[c/808080:Hold Shift to expand]]
+			ShiftExpand: "[[c/808080:Hold Shift to expand]]"
 			WeaponPart: "'Maybe I could combine this with other parts to make a weapon.'"
 			GeneratedSprite: "[c/808080:This item has no set sprite, using base sprite and material color]"
 			KnockbackImmune: Grants immunity to knockback
@@ -229,6 +229,8 @@
 			Demonite: Demonite
 			Crimtane: Crimtane
 			Hellstone: Hellstone
+			FerroSteel: Ferro-Steel
+			ForgedLight: Forged Light
 		}
 
 		MaterialTooltip: {

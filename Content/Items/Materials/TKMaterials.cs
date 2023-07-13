@@ -10,6 +10,7 @@ namespace XenoMod.Content.Items.Materials
     {
         public override void SetDefaults()
         {
+            overrideRarity = true;
             rarity = ItemRarityID.Master;
             color = Main.DiscoColor;
             itemId = ItemID.AngelStatue;
@@ -249,6 +250,7 @@ namespace XenoMod.Content.Items.Materials
             itemId = ItemID.CrimtaneBar;
         }
     }
+    [Autoload(false)]
     public class Hellstone : Demonite
     {
         public override void SetDefaults()
@@ -259,6 +261,31 @@ namespace XenoMod.Content.Items.Materials
             itemId = ItemID.HellstoneBar;
             baseStr += 1;
             rodStr += 2.3f;
+        }
+    }
+    // Mod's materials
+    [Autoload(false)]
+    public class FerroSteel : Iron
+    {
+        public override void SetDefaults()
+        {
+            base.SetDefaults();
+            color = new(30, 30, 30);
+            itemId = ModContent.ItemType<FerroSteelBar>();
+            baseStr += 1.8f;
+            rodStr += 3.45f;
+        }
+    }
+    [Autoload(false)]
+    public class ForgedLight : Hellstone
+    {
+        public override void SetDefaults()
+        {
+            base.SetDefaults();
+            color = Color.WhiteSmoke;
+            itemId = ModContent.ItemType<ForgedLightBar>();
+            baseStr *= 8;
+            rodStr *= 8;
         }
     }
 }

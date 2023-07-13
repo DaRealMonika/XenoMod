@@ -130,6 +130,7 @@ namespace XenoMod
 
         public ModTranslation DisplayName { get; internal set; }
 
+        public bool overrideRarity = false;
         public int rarity = ItemRarityID.White;
         public int itemId;
         public Dictionary<string, float> amountOverride = new();
