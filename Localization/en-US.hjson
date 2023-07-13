@@ -3,6 +3,7 @@
 		Common: {
 			SpecialCrafting: Used to craft items from
 			SwappedWith: Can be swapped with
+			ShiftExpand: [[c/808080:Hold Shift to expand]]
 			WeaponPart: "'Maybe I could combine this with other parts to make a weapon.'"
 			GeneratedSprite: "[c/808080:This item has no set sprite, using base sprite and material color]"
 			KnockbackImmune: Grants immunity to knockback
@@ -232,11 +233,12 @@
 
 		MaterialTooltip: {
 			Base: "Weapon Effectiveness:"
-			BaseExpand: "Weapon Effectiveness: [[c/808080:Hold Shift to expand]]"
+			BaseExpand: "Weapon Effectiveness: {$Mods.XenoMod.Common.ShiftExpand}"
 			Rod: "    Rod: [c/{0}:{1}]"
 			Binding: "    Binding: [c/{0}:{1}]"
 			Chain: "    Chain: [c/{0}:{1}]"
 			Blade: "    Sword Blade: [c/{0}:{1}]"
+			Hilt: "    Sword Hilt: [x/{0}:{1}]"
 			Tip: "    Spear Tip: [c/{0}:{1}]"
 			Grip: "    Bow Grip: [c/{0}:{1}]"
 			Barrel: "    Gun Barrel: [c/{0}:{1}]"
