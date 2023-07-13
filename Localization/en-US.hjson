@@ -68,6 +68,7 @@
 			RodOfLunatics: Rod of Lunatics
 			WeaponRod: " Rod"
 			WeaponBinding: " Binding"
+			WeaponChain: " Chain"
 			WeaponBlade: " Sword Blade"
 			WeaponTip: " Spear Tip"
 			WeaponGrip: " Bow Grip"
@@ -138,6 +139,7 @@
 			RodOfLunatics: "`A cultist's favorite weapon.`"
 			WeaponRod: "{$Mods.XenoMod.Common.WeaponPart}"
 			WeaponBinding: "{$Mods.XenoMod.Common.WeaponPart}"
+			WeaponChain: "{$Mods.XenoMod.Common.WeaponPart}"
 			WeaponBlade: "{$Mods.XenoMod.Common.WeaponPart}"
 			WeaponTip: "{$Mods.XenoMod.Common.WeaponPart}"
 			WeaponGrip: "{$Mods.XenoMod.Common.WeaponPart}"
@@ -233,6 +235,7 @@
 			BaseExpand: "Weapon Effectiveness: [[c/808080:Hold Shift to expand]]"
 			Rod: "    Rod: [c/{0}:{1}]"
 			Binding: "    Binding: [c/{0}:{1}]"
+			Chain: "    Chain: [c/{0}:{1}]"
 			Blade: "    Sword Blade: [c/{0}:{1}]"
 			Tip: "    Spear Tip: [c/{0}:{1}]"
 			Grip: "    Bow Grip: [c/{0}:{1}]"

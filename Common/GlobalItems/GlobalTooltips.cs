@@ -53,31 +53,34 @@ namespace XenoMod.Common.GlobalItems
                 string tipExpand = Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Base");
 
                 float rod = mat.rodStr != 0 ? mat.rodStr : mat.baseStr;
-                if (rod != 0 && (kind == "All" || kind == "Rod")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Rod", rod > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), rod);
+                if (rod != 0 && (kind == "All" || kind == "WeaponRod")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Rod", rod > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), rod);
 
                 float binding = mat.bindingStr != 0 ? mat.bindingStr : mat.baseStr;
-                if (binding != 0 && (kind == "All" || kind == "Binding")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Binding", binding > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), binding);
+                if (binding != 0 && (kind == "All" || kind == "WeaponBinding")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Binding", binding > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), binding);
+
+                float chain = mat.chainStr != 0 ? mat.chainStr : mat.baseStr;
+                if (chain != 0 && (kind == "All" || kind == "WeaponChain")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Chain", chain > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), chain);
 
                 float blade = mat.bladeStr != 0 ? mat.bladeStr : mat.baseStr;
-                if (blade != 0 && (kind == "All" || kind == "Blade")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Blade", blade > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), blade);
+                if (blade != 0 && (kind == "All" || kind == "WeaponBlade")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Blade", blade > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), blade);
 
                 float spearTip = mat.tipStr != 0 ? mat.tipStr : mat.baseStr;
-                if (spearTip != 0 && (kind == "All" || kind == "Tip")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Tip", spearTip > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), spearTip);
+                if (spearTip != 0 && (kind == "All" || kind == "WeaponTip")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Tip", spearTip > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), spearTip);
 
                 float grip = mat.gripStr != 0 ? mat.gripStr : mat.baseStr;
-                if (grip != 0 && (kind == "All" || kind == "Grip")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Grip", grip > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), grip);
+                if (grip != 0 && (kind == "All" || kind == "WeaponGrip")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Grip", grip > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), grip);
 
                 float barrel = mat.barrelStr != 0 ? mat.barrelStr : mat.baseStr;
-                if (barrel != 0 && (kind == "All" || kind == "Barrel")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Barrel", barrel > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), barrel);
+                if (barrel != 0 && (kind == "All" || kind == "WeaponBarrel")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Barrel", barrel > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), barrel);
 
                 float cover = mat.coverStr != 0 ? mat.coverStr : mat.baseStr;
-                if (cover != 0 && (kind == "All" || kind == "Cover")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Cover", cover > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), cover);
+                if (cover != 0 && (kind == "All" || kind == "WeaponCover")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Cover", cover > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), cover);
 
                 float stone = mat.stoneStr != 0 ? mat.stoneStr : mat.baseStr;
-                if (stone != 0 && (kind == "All" || kind == "Stone")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Stone", stone > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), stone);
+                if (stone != 0 && (kind == "All" || kind == "WeaponStone")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Stone", stone > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), stone);
 
                 float hook = mat.hookStr != 0 ? mat.hookStr : mat.baseStr;
-                if (hook != 0 && (kind == "All" || kind == "Hook")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Hook", hook > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), hook);
+                if (hook != 0 && (kind == "All" || kind == "WeaponHook")) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Hook", hook > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), hook);
 
                 float modifiers = mat.modifierSlots;
                 if (modifiers != 0) tipExpand += "\n" + Language.GetTextValue(XenoMod.ModLocal + "MaterialTooltip.Modifiers", modifiers > 0 ? Color.ForestGreen.Hex3() : Color.DarkRed.Hex3(), modifiers);
@@ -114,7 +117,7 @@ namespace XenoMod.Common.GlobalItems
                     //break;
                 }
             }*/
-            tooltips.Add(new(Mod, "Debug", item.ModItem?.Texture ?? ""));
+            //tooltips.Add(new(Mod, "Debug", item.ModItem?.Texture ?? ""));
 #endif
         }
     }

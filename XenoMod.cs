@@ -15,6 +15,7 @@ namespace XenoMod
 	public class XenoMod : Mod
 	{
 		public const string ModLocal = "Mods.XenoMod.";
+        public const string CommonLocal = ModLocal + "Common.";
 		public const string ItemNameLocal = ModLocal + "ItemName.";
 		public const string ItemTipLocal = ModLocal + "ItemTooltip.";
 		public const string BuffNameLocal = ModLocal + "BuffName.";
@@ -129,7 +130,6 @@ namespace XenoMod
 
         public ModTranslation DisplayName { get; internal set; }
 
-        public int stack = 999;
         public int rarity = ItemRarityID.White;
         public int itemId;
         public Dictionary<string, float> amountOverride = new();
@@ -140,6 +140,7 @@ namespace XenoMod
         public float baseStr = 0;
         public float rodStr = 0;
         public float bindingStr = 0;
+        public float chainStr = 0;
         public float bladeStr = 0;
         public float tipStr = 0;
         public float gripStr = 0;

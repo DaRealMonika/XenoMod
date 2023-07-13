@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Terraria;
-using Terraria.GameContent;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
@@ -21,6 +20,11 @@ namespace XenoMod.Content.Items.Materials
 	{
 		public override float MaterialAmount => 2;
 	}
+	[Autoload(false)]
+	public class WeaponChain : ModTKPart
+	{
+        public override float MaterialAmount => 2;
+    }
 	[Autoload(false)]
 	public class WeaponBlade : ModTKPart
 	{
@@ -86,7 +90,7 @@ namespace XenoMod.Content.Items.Materials
 
         public override void SetDefaults()
         {
-            Item.maxStack = MatType.stack;// seems a strange choice to make material type determine max stack, but you do you
+			Item.maxStack = 999;
             Item.rare = MatType.rarity;
             if (!HasTexture) Item.color = MatType.color;
             Item.width = 20;
@@ -106,7 +110,7 @@ namespace XenoMod.Content.Items.Materials
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
-			if (!HasTexture) tooltips.Add(new(Mod, "GeneratedSprite", Language.GetTextValue("Mods.XenoMod.Common.GeneratedSprite")));
+			if (!HasTexture) tooltips.Add(new(Mod, "GeneratedSprite", Language.GetTextValue(XenoMod.CommonLocal + "GeneratedSprite")));
 		}
 	}
 }

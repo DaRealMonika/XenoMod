@@ -10,6 +10,7 @@ namespace XenoMod.Content.Items.Materials
     {
         public override void SetDefaults()
         {
+            rarity = ItemRarityID.Master;
             color = Main.DiscoColor;
             itemId = ItemID.AngelStatue;
             stationId = TileID.WorkBenches;
@@ -231,6 +232,7 @@ namespace XenoMod.Content.Items.Materials
         public override void SetDefaults()
         {
             base.SetDefaults();
+            rarity = ItemRarityID.Blue;
             color = new(117, 65, 193);
             itemId = ItemID.DemoniteBar;
             baseStr += 1;
@@ -252,6 +254,7 @@ namespace XenoMod.Content.Items.Materials
         public override void SetDefaults()
         {
             base.SetDefaults();
+            rarity = ItemRarityID.Orange;
             color = new(255, 132, 0);
             itemId = ItemID.HellstoneBar;
             baseStr += 1;
