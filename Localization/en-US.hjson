@@ -82,9 +82,9 @@
 		ItemTooltip: {
 			EmpressButterflyJar: "{$Mods.XenoMod.Common.SpecialCrafting} {$Mods.XenoMod.ItemName.PureLight}"
 			RPG:
-			'''
-			'Don't shoot a leg off!'
-			'''
+				'''
+				'Don't shoot a leg off!'
+				'''
 			PlanteraSpawn:
 				'''
 				Summons {$NPCName.Plantera} in the {$Bestiary_Biomes.UndergroundJungle}

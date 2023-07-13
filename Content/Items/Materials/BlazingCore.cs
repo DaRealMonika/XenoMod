@@ -19,6 +19,8 @@ namespace XenoMod.Content.Items.Materials
             Item.maxStack = 999;
             Item.value = Item.buyPrice(gold: 36);
             Item.rare = ItemRarityID.LightRed;
+            Item.width = 20;
+            Item.height = 20;
         }
     }
 }

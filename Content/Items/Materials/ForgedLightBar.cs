@@ -22,6 +22,8 @@ namespace XenoMod.Content.Items.Materials
             Item.value = Item.buyPrice(platinum: 1);
             Item.rare = ItemRarityID.Red;
             Item.useStyle = ItemUseStyleID.Swing;
+            Item.width = 20;
+            Item.height = 20;
             Item.useTurn = true;
             Item.useAnimation = 15;
             Item.useTime = 10;

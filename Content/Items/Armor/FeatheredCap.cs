@@ -19,6 +19,8 @@ namespace XenoMod.Content.Items.Armor
             Item.defense = 4;
             Item.value = Item.buyPrice(gold: 4);
             Item.rare = ItemRarityID.Orange;
+            Item.width = 18;
+            Item.height = 18;
         }
 
         public override void UpdateEquip(Player player)

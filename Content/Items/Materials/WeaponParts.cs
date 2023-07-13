@@ -9,17 +9,12 @@ namespace XenoMod.Content.Items.Materials
 	public class WeaponRod : ModTKPart
 	{
 		public override float MaterialAmount => 3;
-		public override void SetDefaults() {
-			base.SetDefaults();
-			Item.width = 32;
-			Item.height = 32;
-		}
 	}
 	[Autoload(false)]
 	public class WeaponBinding : ModTKPart
 	{
 		public override float MaterialAmount => 2;
-	}
+    }
 	[Autoload(false)]
 	public class WeaponChain : ModTKPart
 	{
@@ -86,6 +81,8 @@ namespace XenoMod.Content.Items.Materials
         {
             DisplayName.SetDefault($"{{${MatType.DisplayName.Key}}}{{$Mods.{Mod.Name}.ItemName.{BaseName}}}");
             Tooltip.SetDefault($"{{$Mods.{Mod.Name}.ItemTooltip.{BaseName}}}");
+            float baseAmount = MatType.amountOverride.TryGetValue(MaterialMultType, out float amount) ? amount : MaterialAmount;
+			SacrificeTotal = (int)((baseAmount * MatType.amountMult) * 5.5f);
         }
 
         public override void SetDefaults()
@@ -108,7 +105,7 @@ namespace XenoMod.Content.Items.Materials
             }
         }
 
-		public override void ModifyTooltips(List<TooltipLine> tooltips)
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
 			if (!HasTexture) tooltips.Add(new(Mod, "GeneratedSprite", Language.GetTextValue(XenoMod.CommonLocal + "GeneratedSprite")));
 		}

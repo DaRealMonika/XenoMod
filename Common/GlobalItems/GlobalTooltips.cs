@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -106,17 +108,14 @@ namespace XenoMod.Common.GlobalItems
 
             if (Parts(item, out ModTKMaterial parts, out string kind)) MatTips(parts, kind);
 #if DEBUG
-            /*string txt = string.Empty;
-            for (int i = 0; i < TextureAssets.Item.Length; i++)
-            {
-                if (TextureAssets.Item[i].Name == "UnloadedItem")
-                {
-                    if (txt == null) txt = i.ToString();
-                    else txt += "\n" + i;
-                    //break;
-                }
-            }*/
-            //tooltips.Add(new(Mod, "Debug", item.ModItem?.Texture ?? ""));
+            string txt = string.Empty;
+            txt += "Type: " + item.type;
+            txt += "\nTexture: " + item.ModItem?.Texture ?? "Item_" + item.type;
+            Dictionary<int, int> sacrifice = CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId;
+            txt += "\nSacrifice: " + (sacrifice.ContainsKey(item.type) ? sacrifice[item.type] : "0");
+            txt += "\nWidth: " + item.width;
+            txt += "\nHeight: " + item.height;
+            tooltips.Add(new(Mod, "Debug", txt));
 #endif
         }
     }

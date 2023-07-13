@@ -33,7 +33,7 @@ namespace XenoMod.Content.Items.Consumables
 
         public override bool CanUseItem(Player player)
         {
-            return player.ZoneJungle && player.ZoneDirtLayerHeight && Main.hardMode && NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3 && !NPC.AnyNPCs(NPCID.Plantera);
+            return player.ZoneJungle && (player.ZoneDirtLayerHeight || player.ZoneRockLayerHeight || player.ZoneUnderworldHeight) && Main.hardMode && NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3 && !NPC.AnyNPCs(NPCID.Plantera);
         }
 
         public override bool? UseItem(Player player)

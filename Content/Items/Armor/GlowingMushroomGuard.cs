@@ -18,6 +18,8 @@ namespace XenoMod.Content.Items.Armor
             Item.defense = 3;
             Item.value = Item.buyPrice(gold: 1);
             Item.rare = ItemRarityID.White;
+            Item.width = 18;
+            Item.height = 18;
         }
 
         public override void AddRecipes()
